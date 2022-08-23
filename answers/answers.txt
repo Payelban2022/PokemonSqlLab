@@ -1,0 +1,56 @@
+1. What are all the types of pokemon that a pokemon can have?
+A: 2 types -primary and secondary type.
+
+2.What is the name of the pokemon with id 45?
+A.mysql> select name from pokemons where id = 45;
++-------+
+| name  |
++-------+
+| Eevee |
++-------+
+
+
+
+3.How many pokemon are there?
+A.mysql> select count(*) as "pokemoncount" from pokemons;
++--------------+
+| pokemoncount |
++--------------+
+|          476 |
++--------------+
+
+
+
+4.How many types are there?
+A.mysql> select distinct(name) as 'type' from types;
++----------+
+| type     |
++----------+
+| Normal   |
+| Water    |
+| Grass    |
+| Rock     |
+| Fire     |
+| Ground   |
+| Poison   |
+| Bug      |
+| Electric |
+| Dragon   |
+| Steel    |
+| Dark     |
+| Fighting |
+| Psychic  |
+| Ghost    |
+| Fairy    |
+| Ice      |
+| Flying   |
++----------+
+18 rows in set (0.07 sec)
+
+5.How many pokemon have a secondary type?
+A.mysql> select count(secondary_type) as "secondary_type" from pokemons;
++----------------+
+| secondary_type |
++----------------+
+|            220 |
++----------------+
